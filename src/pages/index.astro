@@ -1,0 +1,19 @@
+---
+import Layout from "../layout/base.astro";
+import MenuAtas from "../bagian/menuAtas.astro";
+import MenuKedua from "../bagian/menuKedua.astro";
+---
+
+<Layout>
+  <div class="melayang">
+    <MenuAtas />
+    <MenuKedua />
+  </div>
+</Layout>
+
+<style>
+  .melayang {
+    position: sticky;
+    top: 0;
+  }
+</style>

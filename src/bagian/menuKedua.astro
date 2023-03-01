@@ -1,0 +1,35 @@
+<section>
+  <div class="container">
+    <div class="menunya">
+      {
+        Array(5)
+          .fill("")
+          .map((x, n) => (
+            <>
+              {n != 0 && <div>&bull;</div>}
+              <a href="/">Menu {n + 1}</a>
+            </>
+          ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .menunya {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    padding: 5px 0;
+  }
+  section {
+    background: var(--yellow-300);
+    padding: 5px;
+  }
+  a:hover {
+    color: var(--red-500);
+  }
+  a {
+    font-size: 15px;
+  }
+</style>

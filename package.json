@@ -1,23 +1,26 @@
 {
-  "name": "iles-app",
-  "version": "0.0.0",
+  "name": "blog-baru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "iles dev --open",
-    "build": "iles build",
-    "preview": "iles preview --open --port 5050",
-    "typecheck": "vue-tsc --noEmit"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "node": "^14.18 || >= 16.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzaini30/blog-baru.git"
   },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.9",
-    "iles": "^0.8.6",
-    "typescript": "^4.5",
-    "vue-tsc": "^0.38"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mzaini30/blog-baru/issues"
   },
+  "homepage": "https://github.com/mzaini30/blog-baru#readme",
   "dependencies": {
-    "@stylify/unplugin": "^0.5.27",
-    "svelte": "^3.52.0"
+    "@unocss/reset": "^0.50.2",
+    "astro": "^2.0.16",
+    "prettier-plugin-astro": "^0.8.0",
+    "warna-tailwind": "^0.0.3"
   }
 }
