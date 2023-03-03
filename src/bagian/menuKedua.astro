@@ -1,3 +1,10 @@
+---
+import Github from "../icon/github.astro";
+import Npm from "../icon/nodeJs.astro";
+import Android from "../icon/android.astro";
+import Firefox from "../icon/firefox.astro";
+---
+
 <section>
   <div class="container">
     <div class="menunya">
@@ -12,15 +19,49 @@
           ))
       }
     </div>
+    <div class="menuMedsos">
+      <span>Portfolio:</span>
+      <a href="https://gihub.com/mzaini30"><Github /></a>
+      <a href="https://www.npmjs.com/~mzaini30"><Npm /></a>
+      <a href="https://play.google.com/store/apps/dev?id=5401138465689796048"
+        ><Android /></a
+      >
+      <a
+        class="firefox"
+        href="https://addons.mozilla.org/id/firefox/user/17443701/"
+        ><Firefox /></a
+      >
+    </div>
   </div>
 </section>
 
+<style is:global>
+  .menuMedsos svg {
+    width: 20px;
+    height: auto;
+  }
+  .firefox svg {
+    width: 17px;
+  }
+</style>
+
 <style>
-  .menunya {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .menunya,
+  .menuMedsos {
     align-items: center;
     display: flex;
     gap: 10px;
     padding: 5px 0;
+  }
+  .menuMedsos {
+    gap: 5px;
   }
   section {
     background: var(--yellow-300);
