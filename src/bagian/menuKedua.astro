@@ -5,29 +5,38 @@ import Android from "../icon/android.astro";
 import Firefox from "../icon/firefox.astro";
 ---
 
-<section>
-  <div class="container">
-    <div class="menunya">
+<section class="p-1 bg-yellow-300">
+  <div class="flex justify-between items-center max-w-[1100px] mx-auto">
+    <div class="items-center flex gap-2 py-1">
       {
         Array(5)
           .fill("")
           .map((x, n) => (
             <>
               {n != 0 && <div>&bull;</div>}
-              <a href="/">Menu {n + 1}</a>
+              <a class="text-sm hover:text-red-500" href="/">
+                Menu {n + 1}
+              </a>
             </>
           ))
       }
     </div>
-    <div class="menuMedsos">
+    <div class="items-center flex gap-2 py-1 gap-1">
       <span>Portfolio:</span>
-      <a href="https://gihub.com/mzaini30"><Github /></a>
-      <a href="https://www.npmjs.com/~mzaini30"><Npm /></a>
-      <a href="https://play.google.com/store/apps/dev?id=5401138465689796048"
+      <a class="text-sm hover:text-red-500" href="https://gihub.com/mzaini30"
+        ><Github /></a
+      >
+      <a
+        class="text-sm hover:text-red-500"
+        href="https://www.npmjs.com/~mzaini30"><Npm /></a
+      >
+      <a
+        class="text-sm hover:text-red-500"
+        href="https://play.google.com/store/apps/dev?id=5401138465689796048"
         ><Android /></a
       >
       <a
-        class="firefox"
+        class="firefox text-sm hover:text-red-500"
         href="https://addons.mozilla.org/id/firefox/user/17443701/"
         ><Firefox /></a
       >
@@ -41,36 +50,6 @@ import Firefox from "../icon/firefox.astro";
     height: auto;
   }
   .firefox svg {
-    width: 17px;
-  }
-</style>
-
-<style>
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .menunya,
-  .menuMedsos {
-    align-items: center;
-    display: flex;
-    gap: 10px;
-    padding: 5px 0;
-  }
-  .menuMedsos {
-    gap: 5px;
-  }
-  section {
-    background: var(--yellow-300);
-    padding: 5px;
-  }
-  a:hover {
-    color: var(--red-500);
-  }
-  a {
-    font-size: 15px;
+    width: 1.5rem;
   }
 </style>

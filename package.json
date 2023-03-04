@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/mzaini30/blog-baru#readme",
   "dependencies": {
-    "@unocss/reset": "^0.50.2",
+    "@unocss/reset": "^0.50.3",
     "astro": "^2.0.16",
     "prettier-plugin-astro": "^0.8.0",
+    "unocss": "^0.50.3",
     "warna-tailwind": "^0.0.3"
   }
 }
