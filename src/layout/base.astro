@@ -1,6 +1,7 @@
 ---
 // @ts-ignore
 import icon from "../gambar/zen-zen.png";
+import LinkKiri from "../bagian/linkKiri.astro";
 ---
 
 <!DOCTYPE html>
@@ -13,7 +14,17 @@ import icon from "../gambar/zen-zen.png";
     <link rel="icon" href={icon} />
   </head>
   <body>
-    <slot />
+    <div class="grid grid-cols-12">
+      <div class="col-span-2 bg-white min-h-screen border-r p-4 border-black">
+        <img src={icon} alt="" class="w-15 -rotate-[5deg]" />
+        <LinkKiri link="/" teks="Ringkasan" />
+        <LinkKiri link="/" teks="Profil" />
+      </div>
+      <div class="col-span-7 border-r border-pink-800 bg-pink-100">
+        <slot />
+      </div>
+      <div class="col-span-3 bg-pink-100"></div>
+    </div>
   </body>
 </html>
 
