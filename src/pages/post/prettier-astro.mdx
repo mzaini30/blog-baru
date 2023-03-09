@@ -1,0 +1,34 @@
+---
+layout: "../../layout/post.astro"
+judul: How to Set Up Prettier for Astro Project
+ringkasan: "Prettier is a code formatter that can be used to format your code automatically. In this article, I will show you how to set up Prettier for Astro project."
+tanggal: 2023-02-05 21:46:06
+kategori: "pemrograman"
+gambar: http://images6.fanpop.com/image/answers/3104000/3104261_1355734946734.25res_400_225.jpg
+---
+
+You can't using Prettier for Astro project if you install it from manual install (`npm i astro`). So, I'll tell you how to set up Prettier for Astro project.
+
+First, you must install `prettier-plugin-astro` using this command:
+
+```bash
+npm i -D prettier-plugin-astro
+```
+
+Then, you must create `.prettierrc.cjs` file in your project root directory. In this file, you must add this code:
+
+```javascript
+module.exports = {
+  plugins: [require.resolve("prettier-plugin-astro")],
+  overrides: [
+    {
+      files: "*.astro",
+      options: {
+        parser: "astro",
+      },
+    },
+  ],
+};
+```
+
+Now, you can using Prettier for Astro project. I hope you enjoy it.

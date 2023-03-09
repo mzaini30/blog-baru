@@ -1,0 +1,53 @@
+---
+import Kotak from "./kotak.astro";
+
+// ada 6 postingan
+const postingan = [
+  {
+    judul: "Lorem",
+    kategori: "hello",
+    link: "/lorem",
+    gambar: "https://picsum.photos/200/300",
+  },
+  {
+    judul: "Ipsum",
+    kategori: "hello",
+    link: "/ipsum",
+    gambar: "https://picsum.photos/200/300",
+  },
+  {
+    judul: "Dolor",
+    kategori: "hello",
+    link: "/dolor",
+    gambar: "https://picsum.photos/200/300",
+  },
+  {
+    judul: "Sit",
+    kategori: "hello",
+    link: "/sit",
+    gambar: "https://picsum.photos/200/300",
+  },
+  {
+    judul: "Amet",
+    kategori: "hello",
+    link: "/amet",
+    gambar: "https://picsum.photos/200/300",
+  },
+  {
+    judul: "Consectetur",
+    kategori: "hello",
+    link: "/consectetur",
+    gambar: "https://picsum.photos/200/300",
+  },
+];
+---
+
+<div class="px-27">
+  <div class="text-[100px] font-bold capitalize">beranda.</div>
+  <div class="grid grid-cols-2 gap-3">
+    <div>
+      <Kotak judul={postingan[0].judul} kategori={postingan[0].kategori} />
+    </div>
+    <div>b</div>
+  </div>
+</div>

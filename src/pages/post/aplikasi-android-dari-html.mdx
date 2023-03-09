@@ -1,0 +1,39 @@
+---
+judul: Kenapa Aku Membuat Aplikasi Android dari HTML?
+layout: "../../layout/post.astro"
+ringkasan: Yang penting, buat aplikasi
+kategori: pemrograman
+tanggal: 2023-02-22 13:09:24
+gambar: https://1.bp.blogspot.com/-C50bc5N5saU/XKdrb23J0OI/AAAAAAAANHM/odRl1pJUo8srOUSHlNtSbIfGvnfY-cnoQCLcBGAs/s320/shinjirarenai.jpeg
+---
+
+Bagiku, [membuat aplikasi](/post/biaya-jasa) adalah bentuk kontribusiku pada dunia. Aku ingin memberikan manfaat sebanyak-banyaknya kepada dunia supaya ketika aku sudah nggak ada lagi, aku masih bisa memberikan manfaat kepada banyak orang dengan aplikasi yang aku buat.
+
+Contohnya aja [aplikasi absensi](https://www.silvanadevinta.com/2022/12/aplikasi-absensi-gajihub-antiribet.html) untuk secara otomatis mengabsen kehadiran pegawai perusahaan, aplikasi auto trading untuk menjalankan trading otomatis, aplikasi kumpulan ide postingan untuk memudahkan blogger menentukan postingan yang akan dibuat, dan aplikasi lainnya.
+
+Tapi, terkadang kita terkendala ketika membuat aplikasi dikarenakan bahasa pemrograman yang tidak kita pahami. Contohnya aja, membuat aplikasi Android mewajibkan kita memahami Java. Padahal, aku sendiri sebenarnya nggak bisa Java. Kalau bisa juga cuma copy paste dari tutorial di [internet](/post/cepat-kaya-dari-online). Lalu, bagaimana caraku membuat aplikasi Android? Bagaimana caraku supaya bisa memberikan manfaat kepada banyak orang dengan keterbatasan pengetahuan yang aku miliki?
+
+Maka, kita harus memanfaatkan pengetahuan yang kita miliki. Di sini, aku menemukan cara bahwa bisa loh membuat aplikasi Android hanya dengan HTML. Kebetulan, aku menguasai HTML. Kemudian, aku perlu mengkombinasikannya dengan kode-kode Java supaya HTML yang aku buat ini bisa bekerja.
+
+Endingnya nanti, aku membuat `andro`. Tapi, tentu saja perjalanan menuju ke tools itu (`andro`) tidaklah singkat. Ada banyak proses yang aku lalui.
+
+Berawal dari course yang aku ikuti di Solo, lebih tepatnya di dekatnya Ngruki. Itu adalah kursus pemrograman yang berfokus pada membuat produk dan menjual produk. Jadi, macem-macem yang aku pelajari; coding, desain, ngerakit PC, dan pelajaran lainnya. Nama kursusnya itu adalah Islamic Digital Boarding College (IDBC). Nah, dari banyak pelajaran di sana, yang aku suka tentu saja adalah coding, terutama membuat aplikasi Android. Di situ, kita diajarkan cara singkat yaitu dengan memasukkan HTML ke dalam aplikasi Android kita. Jadi, kita menggunakan fitur webview. Lalu, dari source code yang diberikan oleh mentor kami, aku kembangkanlah menjadi banyak aplikasi Android. Tapi, waktu itu aku belum kenal dengan Android Studio karena yang diajarkan kepada kami adalah menggunakan Eclipse. Kayaknya, waktu itu memang lebih banyak orang yang menggunakan Eclipse daripada Android Studio; mungkin karena Android Studio masih versi awal rilisnya.
+
+Nah, aplikasi-aplikasi Android yang aku buat itu, waktu itu belum kenal dengan yang namanya copyright sih. Pokoknya, aku pengen buat apa, aku buat aja. Kemudian, aku mulai memberanikan diri menguploadnya ke Play Store dengan [biaya](/post/biaya-transaksi-crypto) pendaftaran $25 (sekarang masih segitu sih). Kuupload deh aplikasi-aplikasi yang aku buat. Terus, mbakku nelpon: "Kenapa nggak dikasih iklan?" Aku pun akhirnya memasang iklan dan belajar menggunakan Android Studio karena ternyata kode Admob nggak bisa dipasang jika menggunakan Eclipse.
+
+Kemudian, aku berpikir: "Sepertinya kodenya berantakan deh kalau aku jadikan satu, yang kode-kode Javanya aplikasi Android dengan kode-kode HTML". Akhirnya, aku membuat `andro`. Dengan `andro`, kamu berfokus aja dengan membuat HTML. Nanti, tinggal jalankan perintah `pnpm andro`, kode-kode HTML yang akan kamu buat itu akan berkumpul di satu folder project Android Studio yang nama foldernya itu adalah `andro`.
+
+Oh iya, kalau kamu mau menggunakan `andro`, install dulu dengan perintah `pnpm i andro degit`. Kemudian, init project dengan perintah `pnpm andro init`. Nanti, akan terbentuk file `andro.json` yang isinya adalah:
+
+```json
+{
+  "folder": "dist",
+  "judul": "Aplikasi",
+  "admobApplication": "ca-app-pub-3940256099942544~3347511713",
+  "admobBanner": "ca-app-pub-3940256099942544/6300978111",
+  "versi": 1,
+  "id": "com.user.app"
+}
+```
+
+Nah, itu tinggal kamu sesuaikan aja. Kalau sudah, tinggal jalankan perintah `pnpm andro`. Simpel banget kan ya? Jadi, yuk kita buat banyak aplikasi Android dan berikan maslahat kepada dunia.

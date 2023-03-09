@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build"
@@ -19,8 +20,11 @@
   },
   "homepage": "https://github.com/mzaini30/blog-baru#readme",
   "dependencies": {
+    "@astrojs/mdx": "^0.18.0",
     "@unocss/reset": "^0.50.3",
-    "astro": "^2.0.16",
+    "astro": "^2.1.2",
+    "input": "^1.0.1",
+    "kumpulan-tools": "^1.0.0",
     "prettier-plugin-astro": "^0.8.0",
     "unocss": "^0.50.3",
     "warna-tailwind": "^0.0.3"

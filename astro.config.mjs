@@ -1,5 +1,8 @@
-import unoCss from "unocss/astro"
+import unoCss from "unocss/astro";
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
 
-export default {
-    integrations: [unoCss()]
-}
+// https://astro.build/config
+export default defineConfig({
+  integrations: [unoCss(), mdx()]
+});
