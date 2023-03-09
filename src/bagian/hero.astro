@@ -7,37 +7,37 @@ const postingan = [
     judul: "Lorem",
     kategori: "hello",
     link: "/lorem",
-    gambar: "https://picsum.photos/200/300",
+    gambar: "https://picsum.photos/900/500",
   },
   {
     judul: "Ipsum",
     kategori: "hello",
     link: "/ipsum",
-    gambar: "https://picsum.photos/200/300",
+    gambar: "https://picsum.photos/900/500",
   },
   {
     judul: "Dolor",
     kategori: "hello",
     link: "/dolor",
-    gambar: "https://picsum.photos/200/300",
+    gambar: "https://picsum.photos/900/500",
   },
   {
     judul: "Sit",
     kategori: "hello",
     link: "/sit",
-    gambar: "https://picsum.photos/200/300",
+    gambar: "https://picsum.photos/900/500",
   },
   {
     judul: "Amet",
     kategori: "hello",
     link: "/amet",
-    gambar: "https://picsum.photos/200/300",
+    gambar: "https://picsum.photos/900/500",
   },
   {
     judul: "Consectetur",
     kategori: "hello",
     link: "/consectetur",
-    gambar: "https://picsum.photos/200/300",
+    gambar: "https://picsum.photos/900/500",
   },
 ];
 ---
@@ -46,8 +46,20 @@ const postingan = [
   <div class="text-[100px] font-bold capitalize">beranda.</div>
   <div class="grid grid-cols-2 gap-3">
     <div>
-      <Kotak judul={postingan[0].judul} kategori={postingan[0].kategori} />
+      <Kotak
+        judul={postingan[0].judul}
+        link={postingan[0].link}
+        kategori={postingan[0].kategori}
+        gambar={postingan[0].gambar}
+      />
     </div>
-    <div>b</div>
+    <div>
+      <Kotak
+        judul={postingan[1].judul}
+        link={postingan[1].link}
+        kategori={postingan[1].kategori}
+        gambar={postingan[1].gambar}
+      />
+    </div>
   </div>
 </div>
