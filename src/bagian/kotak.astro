@@ -4,13 +4,24 @@ const { bentuk, judul, link, kategori, gambar } = Astro.props;
 ---
 
 <div
-  class="rounded-lg shadow-lg shadow-gray-400 bg-no-repeat bg-cover bg-center grayscale hover:grayscale-0 p-4 py-5 w-full relative h-70"
-  style={`background-image: url(${gambar})`}
+  class="rounded-lg shadow-lg shadow-gray-400 p-4 py-5 w-full relative overflow-hidden h-70"
 >
-  <a href={`/kategori/${kategori}`} class="text-white text-sm uppercase"
-    >{kategori}</a
+  <img
+    src={gambar}
+    alt=""
+    class="w-full absolute -z-1 top-0 grayscale left-0"
+  />
+  <a
+    href={`/kategori/${kategori}`}
+    class="text-white text-sm uppercase"
+    style="text-shadow: 2px 2px 0 black">{kategori}</a
   >
-  <div class="text-2xl text-white font-bold mt-4">{judul}</div>
+  <div
+    class="text-2xl text-white font-bold mt-4"
+    style="text-shadow: 2px 2px 0 black"
+  >
+    {judul}
+  </div>
   <a
     href={link}
     class="bg-white font-bold px-7 py-2 shadow shadow-gray-300 rounded absolute left-4 bottom-5 text-sm text-blue-500"
