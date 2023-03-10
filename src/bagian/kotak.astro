@@ -4,12 +4,14 @@ const { bentuk, judul, link, kategori, gambar } = Astro.props;
 ---
 
 <div
-  class="rounded-lg shadow-lg shadow-gray-400 p-4 py-5 w-full relative overflow-hidden h-70"
+  class={`rounded-lg shadow-lg shadow-gray-400 p-4 py-5 w-full relative  ${
+    bentuk == "landscape" ? "h-70" : "h-100"
+  } overflow-hidden`}
 >
   <img
     src={gambar}
     alt=""
-    class="w-full absolute -z-1 top-0 grayscale left-0"
+    class="w-full h-70 absolute -z-1 top-0 left-0 object-cover"
   />
   <a
     href={`/kategori/${kategori}`}
@@ -24,7 +26,7 @@ const { bentuk, judul, link, kategori, gambar } = Astro.props;
   </div>
   <a
     href={link}
-    class="bg-white font-bold px-7 py-2 shadow shadow-gray-300 rounded absolute left-4 bottom-5 text-sm text-blue-500"
+    class="bg-white font-bold px-7 py-2 shadow shadow-black rounded absolute left-4 bottom-5 text-sm"
     >Baca</a
   >
 </div>

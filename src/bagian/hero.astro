@@ -7,7 +7,7 @@ const postingan = [
     judul: "Lorem",
     kategori: "hello",
     link: "/lorem",
-    gambar: "https://picsum.photos/900/500",
+    gambar: "https://picsum.photos/1200/300",
   },
   {
     judul: "Ipsum",
@@ -44,13 +44,14 @@ const postingan = [
 
 <div class="px-27">
   <div class="text-[100px] font-bold capitalize">beranda.</div>
-  <div class="grid grid-cols-2 gap-3">
+  <div class="grid grid-cols-2 gap-5">
     <div>
       <Kotak
         judul={postingan[0].judul}
         link={postingan[0].link}
         kategori={postingan[0].kategori}
         gambar={postingan[0].gambar}
+        bentuk="landscape"
       />
     </div>
     <div>
@@ -59,6 +60,7 @@ const postingan = [
         link={postingan[1].link}
         kategori={postingan[1].kategori}
         gambar={postingan[1].gambar}
+        bentuk="landscape"
       />
     </div>
   </div>
