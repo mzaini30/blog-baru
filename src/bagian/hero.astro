@@ -13,31 +13,31 @@ const postingan = [
     judul: "Ipsum",
     kategori: "hello",
     link: "/ipsum",
-    gambar: "https://picsum.photos/900/500",
+    gambar: "https://picsum.photos/900/501",
   },
   {
     judul: "Dolor",
     kategori: "hello",
     link: "/dolor",
-    gambar: "https://picsum.photos/900/500",
+    gambar: "https://picsum.photos/900/502",
   },
   {
     judul: "Sit",
     kategori: "hello",
     link: "/sit",
-    gambar: "https://picsum.photos/900/500",
+    gambar: "https://picsum.photos/900/503",
   },
   {
     judul: "Amet",
     kategori: "hello",
     link: "/amet",
-    gambar: "https://picsum.photos/900/500",
+    gambar: "https://picsum.photos/900/504",
   },
   {
     judul: "Consectetur",
     kategori: "hello",
     link: "/consectetur",
-    gambar: "https://picsum.photos/900/500",
+    gambar: "https://picsum.photos/900/505",
   },
 ];
 ---
@@ -45,7 +45,7 @@ const postingan = [
 <div class="px-27">
   <div class="text-[100px] font-bold capitalize">beranda.</div>
   <div class="grid grid-cols-2 gap-5">
-    <div>
+    <div class="grid gap-5 grid-cols-1">
       <Kotak
         judul={postingan[0].judul}
         link={postingan[0].link}
@@ -53,13 +53,45 @@ const postingan = [
         gambar={postingan[0].gambar}
         bentuk="landscape"
       />
+      <div class="grid grid-cols-2 gap-5">
+        <Kotak
+          judul={postingan[1].judul}
+          link={postingan[1].link}
+          kategori={postingan[1].kategori}
+          gambar={postingan[1].gambar}
+          bentuk="portrait"
+        />
+        <Kotak
+          judul={postingan[2].judul}
+          link={postingan[2].link}
+          kategori={postingan[2].kategori}
+          gambar={postingan[2].gambar}
+          bentuk="portrait"
+        />
+      </div>
     </div>
-    <div>
+    <div class="grid gap-5 grid-cols-1">
+      <div class="grid grid-cols-2 gap-5">
+        <Kotak
+          judul={postingan[3].judul}
+          link={postingan[3].link}
+          kategori={postingan[3].kategori}
+          gambar={postingan[3].gambar}
+          bentuk="portrait"
+        />
+        <Kotak
+          judul={postingan[4].judul}
+          link={postingan[4].link}
+          kategori={postingan[4].kategori}
+          gambar={postingan[4].gambar}
+          bentuk="portrait"
+        />
+      </div>
       <Kotak
-        judul={postingan[1].judul}
-        link={postingan[1].link}
-        kategori={postingan[1].kategori}
-        gambar={postingan[1].gambar}
+        judul={postingan[5].judul}
+        link={postingan[5].link}
+        kategori={postingan[5].kategori}
+        gambar={postingan[5].gambar}
         bentuk="landscape"
       />
     </div>
