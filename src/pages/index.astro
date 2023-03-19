@@ -1,8 +1,15 @@
 ---
 import Layout from "../layout/base.astro";
 import Hero from "../bagian/hero.astro";
+import TulisanBesar from "../bagian/tulisan-besar.astro";
 ---
 
 <Layout>
   <Hero />
+  <div class="w-288 grid grid-cols-3 mx-auto gap-5 mt-10">
+    <div class="col-span-2 bg-blue-400">
+      <TulisanBesar teks="crypto" />
+    </div>
+    <div class="col-span-1">b</div>
+  </div>
 </Layout>

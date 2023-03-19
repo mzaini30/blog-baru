@@ -2,26 +2,51 @@
 // @ts-ignore
 import icon from "../gambar/zen-zen.png";
 
-const kategori = ["kesehatan", "kuliner", "olahraga", "teknologi", "travel"];
+const tulisan = await Astro.glob("../pages/post/*.mdx");
+let kategori = [];
+
+for (let x of tulisan) {
+  kategori.push(x.frontmatter.kategori);
+}
+kategori = [...new Set(kategori)].sort();
+
+// const kategori = ["kesehatan", "kuliner", "olahraga", "teknologi", "travel"];
+/** catatan
+crypto
+dakwah
+keuangan
+marketing
+pemrograman
+psikologi
+renungan  */
+// const kategori = [
+//   "crypto",
+//   "dakwah",
+//   "keuangan",
+//   "marketing",
+//   "pemrograman",
+//   "psikologi",
+//   "renungan",
+// ];
 ---
 
-<div
-  class="p-3 px-27 border-b border-gray-300 flex justify-between items-center sticky top-0 bg-white z-10"
->
-  <a href="/">
-    <img src={icon} alt="" class="w-8 -rotate-[8deg]" />
-  </a>
-  <div>
-    {
-      kategori.map((x) => (
-        <a
-          href={`/kategori/${x}`}
-          class="text-gray-500 hover:text-gray-800 text-sm mr-8 last:mr-0"
-        >
-          {x}
-        </a>
-      ))
-    }
+<div class="border-b border-gray-300 sticky top-0 bg-white z-10">
+  <div class="p-3 flex justify-between items-center w-292 mx-auto">
+    <a href="/">
+      <img src={icon} alt="" class="w-8 -rotate-[8deg]" />
+    </a>
+    <div>
+      {
+        kategori.map((x) => (
+          <a
+            href={`/kategori/${x}`}
+            class="text-gray-500 hover:text-gray-800 text-sm mr-8 last:mr-0"
+          >
+            {x}
+          </a>
+        ))
+      }
+    </div>
+    <div></div>
   </div>
-  <div></div>
 </div>

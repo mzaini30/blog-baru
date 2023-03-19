@@ -1,71 +1,77 @@
 ---
 import Kotak from "./kotak.astro";
 
+let postingan = await Astro.glob("../pages/post/*.mdx");
+postingan = postingan.sort((a, b) =>
+  b.frontmatter.tanggal < a.frontmatter.tanggal ? 1 : -1
+);
+
 // ada 6 postingan
-const postingan = [
-  {
-    judul: "Lorem",
-    kategori: "hello",
-    link: "/lorem",
-    gambar: "https://picsum.photos/1200/300",
-  },
-  {
-    judul: "Ipsum",
-    kategori: "hello",
-    link: "/ipsum",
-    gambar: "https://picsum.photos/900/501",
-  },
-  {
-    judul: "Dolor",
-    kategori: "hello",
-    link: "/dolor",
-    gambar: "https://picsum.photos/900/502",
-  },
-  {
-    judul: "Sit",
-    kategori: "hello",
-    link: "/sit",
-    gambar: "https://picsum.photos/900/503",
-  },
-  {
-    judul: "Amet",
-    kategori: "hello",
-    link: "/amet",
-    gambar: "https://picsum.photos/900/504",
-  },
-  {
-    judul: "Consectetur",
-    kategori: "hello",
-    link: "/consectetur",
-    gambar: "https://picsum.photos/900/505",
-  },
-];
+// const postingan = [
+//   {
+//     judul: "Agama Itu Buat Apa?",
+//     kategori: "renungan",
+//     link: "/lorem",
+//     gambar:
+//       "http://images5.fanpop.com/image/answers/2244000/2244058_1323875355820.49res_500_281.jpg",
+//   },
+//   {
+//     judul: "Ipsum",
+//     kategori: "hello",
+//     link: "/ipsum",
+//     gambar: "https://picsum.photos/900/501",
+//   },
+//   {
+//     judul: "Dolor",
+//     kategori: "hello",
+//     link: "/dolor",
+//     gambar: "https://picsum.photos/900/502",
+//   },
+//   {
+//     judul: "Sit",
+//     kategori: "hello",
+//     link: "/sit",
+//     gambar: "https://picsum.photos/900/503",
+//   },
+//   {
+//     judul: "Amet",
+//     kategori: "hello",
+//     link: "/amet",
+//     gambar: "https://picsum.photos/900/504",
+//   },
+//   {
+//     judul: "Consectetur",
+//     kategori: "hello",
+//     link: "/consectetur",
+//     gambar: "https://picsum.photos/900/505",
+//   },
+// ];
 ---
 
-<div class="px-27">
+<div class="w-288 mx-auto">
   <div class="text-[100px] font-bold capitalize">beranda.</div>
   <div class="grid grid-cols-2 gap-5">
     <div class="grid gap-5 grid-cols-1">
       <Kotak
-        judul={postingan[0].judul}
-        link={postingan[0].link}
-        kategori={postingan[0].kategori}
-        gambar={postingan[0].gambar}
+        judul={postingan[0].frontmatter.judul}
+        link={postingan[0].url}
+        kategori={postingan[0].frontmatter.kategori}
+        gambar={postingan[0].frontmatter.gambar}
         bentuk="landscape"
       />
       <div class="grid grid-cols-2 gap-5">
         <Kotak
-          judul={postingan[1].judul}
-          link={postingan[1].link}
-          kategori={postingan[1].kategori}
-          gambar={postingan[1].gambar}
+          judul={postingan[1].frontmatter.judul}
+          link={postingan[1].url}
+          kategori={postingan[1].frontmatter.kategori}
+          gambar={postingan[1].frontmatter.gambar}
           bentuk="portrait"
         />
         <Kotak
-          judul={postingan[2].judul}
-          link={postingan[2].link}
-          kategori={postingan[2].kategori}
-          gambar={postingan[2].gambar}
+          judul={postingan[2].frontmatter.judul}
+          link={postingan[2].url}
+          kategori={postingan[2].frontmatter.kategori}
+          gambar={postingan[2].frontmatter.gambar}
           bentuk="portrait"
         />
       </div>
@@ -73,25 +79,25 @@ const postingan = [
     <div class="grid gap-5 grid-cols-1">
       <div class="grid grid-cols-2 gap-5">
         <Kotak
-          judul={postingan[3].judul}
-          link={postingan[3].link}
-          kategori={postingan[3].kategori}
-          gambar={postingan[3].gambar}
+          judul={postingan[3].frontmatter.judul}
+          link={postingan[3].url}
+          kategori={postingan[3].frontmatter.kategori}
+          gambar={postingan[3].frontmatter.gambar}
           bentuk="portrait"
         />
         <Kotak
-          judul={postingan[4].judul}
-          link={postingan[4].link}
-          kategori={postingan[4].kategori}
-          gambar={postingan[4].gambar}
+          judul={postingan[4].frontmatter.judul}
+          link={postingan[4].url}
+          kategori={postingan[4].frontmatter.kategori}
+          gambar={postingan[4].frontmatter.gambar}
           bentuk="portrait"
         />
       </div>
       <Kotak
-        judul={postingan[5].judul}
-        link={postingan[5].link}
-        kategori={postingan[5].kategori}
-        gambar={postingan[5].gambar}
+        judul={postingan[5].frontmatter.judul}
+        link={postingan[5].url}
+        kategori={postingan[5].frontmatter.kategori}
+        gambar={postingan[5].frontmatter.gambar}
         bentuk="landscape"
       />
     </div>
